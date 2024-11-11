@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Dictionnaire de données
+    </title>
+</head>
+
+<body>
+    <div class="main m-auto" style="width: min-content;">
+
+        <h1 class="text-center">Dictionnaire de données GreenVillages</h1>
+
+        <div class="accordion" id="accordionPanelsStayOpenExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                        aria-controls="panelsStayOpen-collapseOne">
+                        Adresse
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                    <div class="accordion-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">nom de données</th>
+                                    <th scope="col">type de données</th>
+                                    <th scope="col">Format</th>
+                                    <th scope="col">tailles</th>
+                                    <th scope="col">contrainte</th>
+                                    <th scope="col">description/relation</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">id_adresse</th>
+                                    <th>int</th>
+                                    <th>auto inc</th>
+                                    <th> </th>
+                                    <th>clé primaire </th>
+                                    <th>identifiant unique de adresse</th>
+                                </tr>
+                                <tr>
+                                    <td scope="row">adr_libelle</td>
+                                    <td>var</td>
+                                    <td></td>
+                                    <td>50 characteres</td>
+                                    <td></td>
+                                    <td>libelle de l'adresse</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">adr_ville</td>
+                                    <td> var</td>
+                                    <td></td>
+                                    <td>50 characteres</td>
+                                    <td></td>
+                                    <td>ville de l'adresse</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">adr_cp</td>
+                                    <td>small int</td>
+                                    <td></td>
+                                    <td>5 characteres</td>
+                                    <td></td>
+                                    <td>code postal l'adresse</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">adr_tel</td>
+                                    <td>int</td>
+                                    <td></td>
+                                    <td>15 characteres</td>
+                                    <td></td>
+                                    <td>telephone de l'adresse</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">adr_type</td>
+                                    <td>booleen</td>
+                                    <td></td>
+                                    <td>enum</td>
+                                    <td></td>
+                                    <td>type d'adresse (facturation, livraison)</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">utilisateur_id</th>
+                                    <th>int</th>
+                                    <th></th>
+                                    <th></th>
+                                    <th>clé étrangère</th>
+                                    <th>identifiant de l'utilisateur</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">fournisseur_id</th>
+                                    <th>int</th>
+                                    <th></th>
+                                    <th></th>
+                                    <th>clé étrangère</th>
+                                    <th>identifiant du fournisseur</th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseTwo">
+                        Utilisateur
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">nom de données</th>
+                                    <th scope="col">type de données</th>
+                                    <th scope="col">Format</th>
+                                    <th scope="col">tailles</th>
+                                    <th scope="col">contrainte</th>
+                                    <th scope="col">description/relation</th>
+                                </tr>
+                            </thead>
+                                <tr>
+                                    <th scope="row">id_utilisateur</th>
+                                    <th>int</th>
+                                    <th>auto inc</th>
+                                    <th> </th>
+                                    <th>clé primaire </th>
+                                    <th>identifiant unique de utilisateur</th>
+                                </tr>
+                                <tr>
+                                    <td scope="row">uti_email</td>
+                                    <td>var</td>
+                                    <td></td>
+                                    <td>50 characteres</td>
+                                    <td></td>
+                                    <td>email de l'utilisateur</td>
+                                </tr>
+                                <tr>
+
+                                    <td scope="row">uti_reference</td>
+                                    <td> var</td>
+                                    <td></td>
+                                    <td>50 characteres</td>
+                                    <td></td>
+                                    <td>reference de l'utilisateur</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">uti_nom</td>
+                                    <td>var</td>
+                                    <td></td>
+                                    <td>50 characteres</td>
+                                    <td></td>
+                                    <td>nom de l'utilisateur</td>
+                                </tr>
+                                <tr>
+                                <td scope="row">uti_prenom</td>
+                                <td> var</td>
+                                <td></td>
+                                <td>50 characteres</td>
+                                <td></td>
+                                <td>prenom de l'utilisateur</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">uti_password</td>
+                                    <td>var</td>
+                                    <td></td>
+                                    <td>50 characteres</td>
+                                    <td></td>
+                                    <td>mot de passe de l'utilisateur</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">uti_verifie</td>
+                                    <td>booleen</td>
+                                    <td></td>
+                                    <td>true/false</td>
+                                    <td></td>
+                                    <td>verification du mail de l'utilisateur</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row"> uti_coef</td>
+                                    <td>float</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>coef pour commande de produit de l'utilisateur</td>
+                                </tr>
+                                <tr>
+                                    <td>uti_dernierco</td>
+                                    <td>date</td>
+                                    <td>jj/mm/aaaa</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>date de dernieres connection utilisateur</td>
+                                </tr>
+                                <tr>
+                                    <td>uti_siret</td>
+                                    <td>int</td>
+                                    <td></td>
+                                    <td>15caracteres</td>
+                                    <td></td>
+                                    <td>numeros de siret de l'utilisateur si il as une entreprise</td>
+                                </tr>
+                                <tr>
+                                    <td>uti_img</td>
+                                    <td>var</td>
+                                    <td></td>
+                                    <td>50 characteres</td>
+                                    <td></td>
+                                    <td>image profil utilisateur</td>
+                                </tr>
+                                <tr>
+                                    <th>employe_id</th>
+                                    <th>int</th>
+                                    <th></th>
+                                    <th></th>
+                                    <th>clé etrangeres</th>
+                                    <th> clé primaires id_employe de employe_id</th>
+                                </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseThree">
+                        Accordion Item #3
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
+                        collapse
+                        plugin adds the appropriate classes that we use to style each element. These classes control the
+                        overall
+                        appearance, as well as the showing and hiding via CSS transitions. You can modify any of this
+                        with
+                        custom CSS or overriding our default variables. It's also worth noting that just about any HTML
+                        can
+                        go
+                        within the <code>.accordion-body</code>, though the transition does limit overflow.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
